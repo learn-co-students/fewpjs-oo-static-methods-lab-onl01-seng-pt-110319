@@ -13,7 +13,7 @@ class Formatter {
     return str.replace(/[^A-Za-z0-9 '-]/g, '')
   }
   static titleize(str){
-    const listOfExceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
+    const listOfExceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
     let workable = str.split(' '); // each word isolated in an array
     let transformed = []; // the result to return at the end
     
@@ -21,8 +21,9 @@ class Formatter {
       if (word === 0){transformed.push(this.capitalize(workable[word]))} // ok
       else if (listOfExceptions.includes(workable[word])){transformed.push(workable[word]);}
       else{
-        transformed.push(workable[word]);
+        transformed.push(this.capitalize(workable[word]));
       }
     }
+    return transformed; // explicitly return
   }
 }
