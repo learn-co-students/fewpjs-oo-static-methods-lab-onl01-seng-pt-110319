@@ -14,10 +14,10 @@ class Formatter {
   }
   static titleize(str){
     const listOfExceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
-    let toTransform = str.split(' '); // each word isolated in an array
+    let workable = str.split(' '); // each word isolated in an array
     let transformed = []; // the result to return at the end
-    for(let word = 0; word < str.length; word++){ // we're iterating through created array 
-      
+    for(let word = 0; word < workable.length; word++){ // we're iterating through created array 
+      if (word === 0){transformed.push(this.capitalize(workable[word]))} // ok
     }
   }
 }
