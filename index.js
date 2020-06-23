@@ -24,6 +24,6 @@ class Formatter {
         transformed.push(this.capitalize(workable[word]));
       }
     }
-    return transformed; // explicitly return
+    return transformed.join( ' '); // explicitly return
   }
 }
