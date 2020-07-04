@@ -13,12 +13,10 @@ class Formatter {
     sentence.map(x => {
     if (badWords.includes(x)){
     answer.push(x)
-    } else {
-    
+    } else {    
     answer.push(this.capitalize(x))
     }    
   })
-    let result = answer.join(" ");
-    return this.capitalize(result)
+    return this.capitalize((answer.join(" ")))
   }
 }
